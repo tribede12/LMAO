@@ -1,0 +1,34 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ACN Hub - Owner: rỒnG#5896", colors)
+
+Section:NewLabel("Defense Mode")
+ Section:NewButton("Open Defense Mode - Without TP", "", function()
+  
+ wait(2)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.18212890625, -184.17771911621, -4167.3227539063)
+ wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.18212890625, -184.17771911621, -4167.3227539063)
+  wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.18212890625, -184.17771911621, -4167.3227539063)
+  wait(2)
+ local args = {
+    [1] = workspace.Worlds.BlackClover.TitanSummon.Trigger
+}
+
+game:GetService("ReplicatedStorage").Remote.SummonTitan:FireServer(unpack(args))
+end)
+
+Section:NewDropdown("Teleport Defense Place", "Click!", {"Defense Place - Crazy Town", "Defense Place - Walled City","Defense Place - Cursed High","Defense Place - Lucky Kingdom","Defense Mode - Inside Lucky Kingdom"}, function(currentOption)
+    if currentOption == "Defense Place - Crazy Town" then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(66.888954162598, -181.36033630371, -2310.8334960938)
+elseif currentOption == "Defense Place - Walled City" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-753.02502441406, -180.10060119629, 632.80249023438)
+elseif currentOption == "Defense Place - Cursed High" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1907.1020507812, -181.05656433105, -2379.5922851562)
+elseif currentOption == "Defense Place - Lucky Kingdom" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160.58981323242, -172.67663574219, -4083.3830566406)
+elseif currentOption == "Defense Mode - Inside Lucky Kingdom" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6284.2309570313, -194.07704162598, 949.49182128906)
+
+end
+end)
